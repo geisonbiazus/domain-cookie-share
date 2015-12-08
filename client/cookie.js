@@ -2,6 +2,7 @@ var CookieHandler = (function() {
 
   var url = 'http://server.dev:4567/cookie';
   var cookieName = '_client.cookie';
+
   var init = function() {
     makeRequest();
   };
@@ -26,7 +27,7 @@ var CookieHandler = (function() {
   };
 
   var createCookie = function(data) {
-    document.cookie = "_client.cookie=" + data;
+    document.cookie = cookieName + "=" + data;
   };
 
   var showCookieValues = function() {
